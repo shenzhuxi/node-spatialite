@@ -1,6 +1,4 @@
 {
-  'variables': { 'target_arch%': 'ia32' },
-
   'target_defaults': {
     'default_configuration': 'Debug',
     'configurations': {
