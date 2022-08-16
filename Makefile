@@ -1,6 +1,3 @@
-REPORTER  ?= spec
-TESTS     ?= test/*.coffee
-
 all: build
 
 build:
@@ -10,11 +7,6 @@ clean:
 	node-gyp clean
 
 test:
-	@PATH="./node_modules/.bin:${PATH}" && NODE_PATH="./lib:$(NODE_PATH)" \
-	mocha \
-	--reporter $(REPORTER) \
-	--require should \
-	--compilers coffee:coffee-script/register \
-	$(TESTS)
+	node test
 
 .PHONY: build clean test
