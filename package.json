@@ -16,12 +16,13 @@
     "url": "git://github.com/zhm/node-spatialite.git"
   },
   "dependencies": {
-    "sqlite3": "5.0.0"
+    "sqlite3": "^5.0.0"
   },
   "engines": {
     "node": ">= 0.6.13"
   },
   "scripts": {
+    "build": "node-gyp configure build",
     "test": "node test"
   },
   "licenses": [
@@ -29,5 +30,8 @@
       "type": "BSD"
     }
   ],
-  "main": "./lib/spatialite"
+  "main": "./lib/spatialite",
+  "devDependencies": {
+    "node-gyp": "^9.3.1"
+  }
 }
